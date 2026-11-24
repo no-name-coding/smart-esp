@@ -17,7 +17,7 @@ os.environ["PATH"] = os.path.expanduser("~/bin") + ":" + os.environ.get("PATH", 
 
 # Einstellungen
 
-PORT = "/dev/cu.usbserial-130"  # aktuell halten
+PORT = "/dev/cu.usbserial-110"  # aktuell halten
 BAUD = 460800
 SAMPLE_RATE = 4000
 

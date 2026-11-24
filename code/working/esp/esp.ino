@@ -40,6 +40,13 @@ void waitForRelease() {
   delay(30);
 }
 
+void waitForPress() {
+  while (digitalRead(JOY_SW) == HIGH) {
+    delay(5);
+  }
+  delay(30);
+}
+
 uint32_t recordAudio() {
   showText("AUFNAHME...\n\nKlicken zum Beenden");
 
@@ -122,8 +129,8 @@ void loop() {
       sendAudio(count);
 
       receiveText();
-
-      delay(2000);
+      waitForPress();
+      //delay(2000);
 
       showText("BEREIT\n\nJoystick klicken");
     }
